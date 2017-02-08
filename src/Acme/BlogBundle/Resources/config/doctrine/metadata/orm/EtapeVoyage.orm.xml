@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EtapeVoyage" table="etape_voyage">
+    <id name="id" type="integer" column="id"/>
+    <id name="idVoyage" type="integer" column="id_voyage"/>
+    <field name="villeDepart" type="string" column="ville_depart" length="45" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="villeArrivee" type="string" column="ville_arrivee" length="45" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="dateDepart" type="string" column="date_depart" length="45" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="dateArrive" type="datetime" column="date_arrive" nullable="false"/>
+    <field name="prix" type="float" column="prix" precision="10" scale="0" nullable="false"/>
+    <field name="placeDispo" type="string" column="place_dispo" length="45" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
